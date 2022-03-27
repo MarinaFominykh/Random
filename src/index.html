@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="page">
+
+    <header class="header">
+        <!-- <img src="./images/logo.png" class="header__logo" alt="Лого"> -->
+        <div class="header__logo">RM</div>
+    </header>
+
+    <main class="content">
+        <button class="button button__add-user">Добавить игрока</button>
+        <section class="list">
+            <ul class="list__roles">
+                <li class="list__role">
+                    <h2 class="list__role-title">Мирный -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Мирный -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Мирный -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Мирный -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Мирный -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Мирный -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Шериф -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Дон мафии -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Мафия -</h2>
+                </li>
+                <li class="list__role">
+                    <h2 class="list__role-title">Мафия -</h2>
+                </li>
+
+
+            </ul>
+
+
+            <ul class="list__niks">
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-1"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-2"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-3"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-4"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-5"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-6"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-7"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-8"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-9"></h2>
+                </li>
+                <li class="list__nik">
+                    <h2 class="list__nik-title namber-10"></h2>
+                </li>
+            </ul>
+        </section>
+        <button class="button button-random">Перемешать</button>
+
+    </main>
+
+    <footer class="footer">
+
+        <p class="footer__logo">&copy; 2022 Рандомайзер</p>
+    </footer>
+
+    <template class='card-template'>
+        <li class="list__nik">
+            <h2 class="list__nik-title"></h2>
+        </li>
+    </template>
+
+    <section class="popup">
+        <form class="popup__container" name="addUserPopupForm" novalidate>
+            <button type="button" class="popup__close"></button>
+            <h2 class="popup__title">Добавить игрока</h2>
+            <fieldset class="popup__contact-info">
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-1" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-2" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-3" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-4" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-5" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-6" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-7" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-8" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-9" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+                <input id="title" type="text" name="name" class="popup__input popup__input_type_title popup__input-10" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                <span id="error-title" class="popup__error popup__error_active"></span>
+
+            </fieldset>
+            <button type="submit" class="popup__save" value="Добавить">Добавить</button>
+        </form>
+    </section>
+
+
+    <script src="./pages/index.js" type="module"></script>
+
+
+</body>
+
+</html>
