@@ -1,14 +1,11 @@
 import { Popup } from "../components/Popup.js";
 import { Section } from "../components/Section.js";
+import{FormValidator} from '../components/FormValidator.js'
 import {
-    arr,
-    container,
-    button,
-    cardTemplateSelector,
-    cardListSection,
-    buttonAddUser,
+       randomButton,
+       buttonAddUser,
+    resetButton,
     popupAddUserSelector,
-    buttonClosePopupAddUser,
     input1,
     input2,
     input3,
@@ -29,10 +26,14 @@ import {
     formInput8,
     formInput9,
     formInput10,
-    submitButton,
-    addUserForm
-} from '../utils/constans.js';
+     addUserForm,
+    config
+    } from '../utils/constans.js';
 
+
+    //Функции
+
+//Рандом
 function getRandomList(array) {
     for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1));
@@ -40,23 +41,9 @@ function getRandomList(array) {
     }
     return array
 }
-const randomArr = getRandomList(arr);
-
-const popupAddUser = new Popup(popupAddUserSelector);
-
-//Слушатель на кнопку открытия попапа
-buttonAddUser.addEventListener('click', () => {
-    popupAddUser.open()
-})
-
-
-//Вызов слушателей для экзепляра класса Popup
-popupAddUser.setEventListeners();
-
-
+//Функция для сабмита формы
 function formSubmitHandler(evt) {
     evt.preventDefault();
-
     input1.textContent = formInput1.value;
     input2.textContent = formInput2.value;
     input3.textContent = formInput3.value;
@@ -67,26 +54,37 @@ function formSubmitHandler(evt) {
     input8.textContent = formInput8.value;
     input9.textContent = formInput9.value;
     input10.textContent = formInput10.value;
-
     popupAddUser.close();
 }
 
-addUserForm.addEventListener('submit', formSubmitHandler);
+//Функция для очистки полей
+function resetData() {
+    input1.textContent = ''
+    input2.textContent = ''
+    input3.textContent = ''
+    input4.textContent = ''
+    input5.textContent = ''
+    input6.textContent = ''
+    input7.textContent = ''
+    input8.textContent = ''
+    input9.textContent = ''
+    input10.textContent = ''
+}
 
-button.addEventListener('click', () => {
-    const inputList = Array.from(addUserForm.querySelectorAll('.popup__input'));
-    const inputListValues = Array.from(
-        [inputList[0].value,
-            inputList[1].value,
-            inputList[2].value,
-            inputList[3].value,
-            inputList[4].value,
-            inputList[5].value,
-            inputList[6].value,
-            inputList[7].value,
-            inputList[8].value,
-            inputList[9].value
-        ])
+function handlerRandomButtonClick() {
+    const inputList = Array.from(document.querySelectorAll('.list__nik-title'));
+         const inputListValues = Array.from(
+          [inputList[0].textContent,
+              inputList[1].textContent,
+              inputList[2].textContent,
+              inputList[3].textContent,
+              inputList[4].textContent,
+              inputList[5].textContent,
+              inputList[6].textContent,
+              inputList[7].textContent,
+              inputList[8].textContent,
+              inputList[9].textContent
+          ])
     const newArr = getRandomList(inputListValues);
     input1.textContent = newArr[0]
     input2.textContent = newArr[1]
@@ -98,4 +96,30 @@ button.addEventListener('click', () => {
     input8.textContent = newArr[7]
     input9.textContent = newArr[8]
     input10.textContent = newArr[9]
+};
+
+//Создание экземпляров классов и вызов методов
+
+const popupAddUser = new Popup(popupAddUserSelector);
+popupAddUser.setEventListeners();
+
+//Валидация формы
+
+const addUserFormValidator = new FormValidator(config, addUserForm);
+addUserFormValidator.enableValidation();
+resetButton.addEventListener('click', resetData);
+
+//Обработчики
+
+buttonAddUser.addEventListener('click', () => {
+  addUserFormValidator.toggleSubmitButton()
+    popupAddUser.open()
 })
+
+addUserForm.addEventListener('submit', formSubmitHandler);
+randomButton.addEventListener('click', handlerRandomButtonClick);
+
+
+
+
+

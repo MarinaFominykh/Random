@@ -1,0 +1,12 @@
+.popup__columns {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+@media screen and (max-width: 540px) {
+    .popup__columns {
+        flex-direction: column;
+        gap: 0;
+    }
+}

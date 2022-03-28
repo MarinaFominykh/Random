@@ -9,11 +9,19 @@
     margin: auto;
     padding-top: 45px;
     padding-bottom: 60px;
+   
+    
 }
 
 @media screen and (max-width: 960px) {
     .page {
         padding-top: 28px;
         padding-bottom: 36px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .page {
+        min-width: 320px;
     }
 }

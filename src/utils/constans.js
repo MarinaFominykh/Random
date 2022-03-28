@@ -1,7 +1,8 @@
 const arr = ['Игрок 1', 'Игрок 2', 'Игрок 3', 'Игрок 4', 'Игрок 5', 'Игрок 6', 'Игрок 7', 'Игрок 8', 'Игрок 9', 'Игрок 10']
 
 const container = document.querySelector('.list__niks');
-const button = document.querySelector('.button-random');
+const randomButton = document.querySelector('.button__random');
+const resetButton = document.querySelector('.button__reset');
 const cardTemplateSelector = '.card-template';
 const cardListSection = '.list__niks';
 const popupAddUserSelector = '.popup';
@@ -30,15 +31,26 @@ const formInput7 = document.querySelector('.popup__input-7');
 const formInput8 = document.querySelector('.popup__input-8');
 const formInput9 = document.querySelector('.popup__input-9');
 const formInput10 = document.querySelector('.popup__input-10');
+const config = {
+    formSelector: '.popup__container',
+    inputSelector: '.popup__input',
+    buttonSelector: '.popup__save',
+    inputErrorClass: 'popup__input_type_error',
+    errorActiveClass: 'popup__error_active',
+    errorSelector: '.popup__error',
+    inactiveButtonClass: 'popup__save_disabled'
+};
+
 
 export {
     arr,
     container,
-    button,
+    randomButton,
     cardTemplateSelector,
     cardListSection,
     popupAddUser,
     buttonAddUser,
+    resetButton,
     popupAddUserSelector,
     buttonClosePopupAddUser,
     input1,
@@ -62,5 +74,6 @@ export {
     formInput9,
     formInput10,
     submitButton,
-    addUserForm
+    addUserForm,
+    config
 }
