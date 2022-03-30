@@ -1,0 +1,11 @@
+.card__user-text {
+    text-align: center;
+    margin: 0;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 960px) {
+    .card__user-text {
+        font-size: 15px;
+    }
+}

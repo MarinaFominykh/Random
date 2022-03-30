@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random</title>
+    <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="page">
+
+    <header class="header">
+
+        <div class="header__logo">RMz</div>
+    </header>
+
+    <main class="content">
+        <h1 class="content__title">Генератор ролей для мафии</h1>
+        <button class="button button__add-user">Заполнить список игроков</button>
+
+        <section class="list">
+
+            <ul class="list__roles">
+               
+            </ul>
+
+            <ul class="list__niks">
+            </ul>
+
+         
+           <div class="list__container list__container_type_button-role">
+                <button class="button button__random-role">Перемешать роли</button>
+                <!-- <button class="button button__reset-role">Очистить</button> -->
+           </div>
+          
+            <div class="list__container list__container_type_button-user"> 
+                <button class="button button__random-user">Перемешать игроков</button>
+                <!-- <button class="button button__reset-user">Очистить</button>  -->
+            </div>
+            <div class="list__container list__container_type_form-role"></div>
+            <div class="list__container list__container_type_form-nik"></div>
+        </section>
+
+            </main>
+
+    <footer class="footer">
+        <p class="footer__logo">&copy; 2022 Рандомайзер</p>
+    </footer>
+
+    <!-- Темплейт для карточки с игроком -->
+    <template class='card-template card-template_type_user'>
+         <li class="card card__nik"> 
+            <h2 class="card__user-text">игрок</h2>
+        </li>
+    </template>
+
+    <!-- Темплейт для карточки с ролью -->
+    <template class='card-template card-template_type_role'>
+          <li class="card card__role"> 
+            <h2 class="card__role-text">роль</h2>
+        </li>
+    </template>
+
+<!-- Темплейт для формы добавления игрока -->
+    <template class='form-template form-template_type_user'>
+        <form class="form">
+            
+            <input name="text" type="text" class="form__input" placeholder="Введите ник" required minlength="2" maxlength="20">
+                <span class="form__input-error form__input-error_active"></span>
+                <button class="button form__submit">Добавить игрока</button>
+        </form>
+    </template>
+
+    <!-- Темплейт для формы добавления роли -->
+    <template class='form-template form-template_type_role'>
+        <form class="form">
+            <input name="text" type="text" class="form__input" placeholder="Введите роль" required minlength="2" maxlength="20">
+                <span class="form__input-error form__input-error_active"></span>
+                <button class="button form__submit">Добавить роль</button>
+        </form>
+    </template>
+
+    <section class="popup">
+        <form class="popup__container" name="addUserPopupForm" novalidate>
+            <button type="button" class="popup__close"></button>
+            <h2 class="popup__title">Добавить игрока</h2>
+            <div class="popup__columns">
+                <fieldset class="popup__column-niks">
+                    <input id="title-1" type="text" name="name" class="popup__input popup__input_type_title popup__input-1" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="title-1" class="title-1-error popup__error popup__error_active"></span>
+                    <input id="title-2" type="text" name="name" class="popup__input popup__input_type_title popup__input-2" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title2" class="title-2-error popup__error popup__error_active"></span>
+                    <input id="title-3" type="text" name="name" class="popup__input popup__input_type_title popup__input-3" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title3" class="title-3-error popup__error popup__error_active"></span>
+                    <input id="title-4" type="text" name="name" class="popup__input popup__input_type_title popup__input-4" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title4" class="title-4-error popup__error popup__error_active"></span>
+                    <input id="title-5" type="text" name="name" class="popup__input popup__input_type_title popup__input-5" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title5" class="title-5-error popup__error popup__error_active"></span>
+
+
+                </fieldset>
+                <fieldset class="popup__column-niks">
+
+                    <input id="title-6" type="text" name="name" class="popup__input popup__input_type_title popup__input-6" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title6" class="title-6-error popup__error popup__error_active"></span>
+                    <input id="title-7" type="text" name="name" class="popup__input popup__input_type_title popup__input-7" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title7" class="title-7-error popup__error popup__error_active"></span>
+                    <input id="title-8" type="text" name="name" class="popup__input popup__input_type_title popup__input-8" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title8" class="title-8-error popup__error popup__error_active"></span>
+                    <input id="title-9" type="text" name="name" class="popup__input popup__input_type_title popup__input-9" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title9" class="title-9-error popup__error popup__error_active"></span>
+                    <input id="title-10" type="text" name="name" class="popup__input popup__input_type_title popup__input-10" placeholder="Введите ник игрока" required minlength="2" maxlength="20">
+                    <span id="error-title10" class="title-10-error popup__error popup__error_active"></span>
+
+                </fieldset>
+            </div>
+            <button type="submit" class="popup__save" value="Добавить">Добавить</button>
+        </form>
+    </section>
+
+
+    <script src="./pages/index.js" type="module"></script>
+
+
+</body>
+
+</html>
