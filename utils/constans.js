@@ -1,13 +1,189 @@
-const arr = ['Игрок 1', 'Игрок 2', 'Игрок 3', 'Игрок 4', 'Игрок 5', 'Игрок 6', 'Игрок 7', 'Игрок 8', 'Игрок 9', 'Игрок 10']
+// const arr = ['Игрок 1', 'Игрок 2', 'Игрок 3', 'Игрок 4', 'Игрок 5', 'Игрок 6', 'Игрок 7', 'Игрок 8', 'Игрок 9', 'Игрок 10']
+// const arr = [ {
+//     text: 'Игрок 1',
+//     type: 'user'
+// },
+// {
+//     text: 'Игрок 2',
+//     type: 'user'
+// },
+// {
+//     text: 'Игрок 3',
+//     type: 'user'
+// }, {
+//     text: 'Игрок 4',
+//     type: 'user'
+// }, {
+//     text: 'Игрок 5',
+//     type: 'user'
+// }, {
+//     text: 'Игрок 6',
+//     type: 'user'
+// },{
+//     text: 'Игрок 7',
+//     type: 'user'
+// }, {
+//     text: 'Игрок 8',
+//     type: 'user'
+// }, {
+//     text: 'Игрок 9',
+//     type: 'user'
+// }, {
+//     text: 'Игрок 10',
+//     type: 'user'
+// } 
+//    ]
+const arr = [{
+        text: 'Игрок 1',
+        isUser: true
+    },
+    {
+        text: 'Игрок 2',
+        isUser: true
+    },
+    {
+        text: 'Игрок 3',
+        isUser: true
+    }, {
+        text: 'Игрок 4',
+        isUser: true
+    }, {
+        text: 'Игрок 5',
+        isUser: true
+    }, {
+        text: 'Игрок 6',
+        isUser: true
+    }, {
+        text: 'Игрок 7',
+        isUser: true
+    }, {
+        text: 'Игрок 8',
+        isUser: true
+    }, {
+        text: 'Игрок 9',
+        isUser: true
+    }, {
+        text: 'Игрок 10',
+        isUser: true
+    },
+    {
+        text: 'Мирный'
 
-const container = document.querySelector('.list__niks');
-const randomButton = document.querySelector('.button__random');
-const resetButton = document.querySelector('.button__reset');
+    },
+    {
+        text: 'Мирный'
+
+    },
+    {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мафия'
+
+    }, {
+        text: 'Мафия'
+
+    }, {
+        text: 'Дон'
+
+    }, {
+        text: 'Шериф'
+
+    }
+
+]
+
+const arrUser = [{
+        text: 'Игрок 1',
+    },
+    {
+        text: 'Игрок 2',
+    },
+    {
+        text: 'Игрок 3',
+    }, {
+        text: 'Игрок 4',
+
+    }, {
+        text: 'Игрок 5',
+
+    }, {
+        text: 'Игрок 6',
+
+    }, {
+        text: 'Игрок 7',
+
+    }, {
+        text: 'Игрок 8',
+
+    }, {
+        text: 'Игрок 9',
+
+    }, {
+        text: 'Игрок 10',
+
+    }
+]
+
+const arrRole = [{
+        text: 'Мирный'
+
+    },
+    {
+        text: 'Мирный'
+
+    },
+    {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мирный'
+
+    }, {
+        text: 'Мафия'
+
+    }, {
+        text: 'Мафия'
+
+    }, {
+        text: 'Дон'
+
+    }, {
+        text: 'Шериф'
+
+    }
+]
+
+const containerSelector = '.list';
+
+const randomUserButton = document.querySelector('.button__random-user');
+const randomRoleButton = document.querySelector('.button__random-role');
+
 const cardTemplateSelector = '.card-template';
-const cardListSection = '.list__niks';
+const userConteiner = document.querySelector('.list__niks');
+const roleConteiner = document.querySelector('.list__roles');
+const cardUserListSection = '.list__niks';
+const cardRoleListSection = '.list__roles';
+
 const popupAddUserSelector = '.popup';
 const popupAddUser = document.querySelector('.popup');
 const buttonAddUser = document.querySelector('.button__add-user');
+
 const buttonClosePopupAddUser = document.querySelector('.popup__close');
 const submitButton = document.querySelector('.popup__save');
 const addUserForm = document.querySelector('.popup__container');
@@ -44,13 +220,14 @@ const config = {
 
 export {
     arr,
-    container,
-    randomButton,
+    randomUserButton,
+    randomRoleButton,
     cardTemplateSelector,
-    cardListSection,
+    cardUserListSection,
+    cardRoleListSection,
     popupAddUser,
     buttonAddUser,
-    resetButton,
+    
     popupAddUserSelector,
     buttonClosePopupAddUser,
     input1,
@@ -75,5 +252,10 @@ export {
     formInput10,
     submitButton,
     addUserForm,
-    config
+    config,
+    containerSelector,
+    userConteiner,
+    roleConteiner,
+    arrUser,
+    arrRole
 }

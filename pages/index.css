@@ -9,18 +9,22 @@
 @import url(../blocks/content/__title/content__title.css);
 @import url(../blocks/list/list.css);
 @import url(../blocks/list/__niks/list__niks.css);
-@import url(../blocks/list/__nik/list__nik.css);
 @import url(../blocks/list/__roles/list__roles.css);
-@import url(../blocks/list/__role/list__role.css);
-@import url(../blocks/list/__nik-title/list__nik-title.css);
-@import url(../blocks/list/__role-title/list__role-title.css);
+@import url(../blocks/list/__container/list__container.css);
+@import url(../blocks/card/card.css);
+@import url(../blocks/card/__user-text/card__user-text.css);
+@import url(../blocks/card/__nik/card__nik.css);
+@import url(../blocks/card/__role/card__role.css);
+@import url(../blocks/card/__role-text/card__role-text.css);
 @import url(../blocks/button/button.css);
+@import url(../blocks/button/__add-user/button__add-user.css);
+@import url(../blocks/button/__random-user/button__random-user.css);
+@import url(../blocks/button/__random-role/button__randome-role.css);
 @import url(../blocks/popup/popup.css);
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__column-niks/popup__column-niks.css);
 @import url(../blocks/popup/__columns/popup__columns.css);
 @import url(../blocks/popup/__input/popup__input.css);
-
 @import url(../blocks/popup/__close/popup__close.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__save/popup__save.css);
@@ -29,8 +33,11 @@
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__error/popup__error.css);
 @import url(../blocks/popup/__error/_active/popup__error_active.css);
-
 @import url(../blocks/popup/__input/_type/popup__input_type_error.css);
- /* *{
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__submit/form__submit.css);
+
+/* *{
     border: 1px red solid;
 } */
