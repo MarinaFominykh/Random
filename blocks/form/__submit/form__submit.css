@@ -1,3 +1,6 @@
 .form__submit {
     margin: 0;
+    background-image: url(../../../images/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
