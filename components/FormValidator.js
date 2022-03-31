@@ -22,7 +22,7 @@ export class FormValidator {
 
 
     _validateInput = (input) => {
-        
+
         const errorContainer = this._form.querySelector(`.${input.id}-error`);
         if (input.validity.valid) {
             this._hideInputError(input, errorContainer);

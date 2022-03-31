@@ -1,13 +1,18 @@
 .card__nik {
     width: 100%;
-    min-height: 26px;
+    
+    min-height: 30px;
     font-size: 15px;
-    background: #FFFFFF;
+    background: none;
     border-radius: 10px;
     position: relative;
     color: black;
     margin: 0 0 10px 0;
+    /* display: grid;
+grid-template-columns: 1fr 40px; */
+   
 }
+
 
 @media screen and (max-width: 960px) {
     .card__nik {

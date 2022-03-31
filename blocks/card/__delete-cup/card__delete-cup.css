@@ -1,0 +1,11 @@
+.card__delete-cup {
+    width: 15px;
+    height: 4px;
+    background-image: url(../../../images/cap_delete.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 1.28px;
+    /* border: 1px red solid; */
+    
+}
+

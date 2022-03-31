@@ -1,18 +1,3 @@
-// export class Card {
-//     constructor(data, cardTemplateSelector) {
-//         this._name = data.name;
-//         this._template = document.querySelector(cardTemplateSelector).content.querySelector('.list__nik');
-//     }
-
-//     getCard() {
-//         this._cardElement = this._template.cloneNode(true);
-//         this._cardTitle = this._cardElement.querySelector('.list__nik-title');
-//         this._cardTitle.textContent = this._name;
-//         return this._cardElement
-//     };
-
-// }
-
 export class Card {
     constructor(cardSelector) {
         this._cardSelector = cardSelector;
@@ -20,18 +5,23 @@ export class Card {
 
     _getTemplate() {
         // забираем разметку из HTML и клонируем элемент
-        const cardElement = document
+        this._cardElement = document
             .querySelector(this._cardSelector)
             .content
             .querySelector('.card')
             .cloneNode(true);
+            this._deleteButton = this._cardElement.querySelector('.card__delete-button');
 
         // вернём DOM-элемент карточки
-        return cardElement;
+        return this._cardElement;
+    }
+    _handleDeleteCard = () => {
+        this._cardElement.remove();
+        // this._cardElement = null;
     }
 
     _setEventListeners() {
-
+        this._deleteButton.addEventListener('click', this._handleDeleteCard);
     }
 
 }

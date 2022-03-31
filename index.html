@@ -12,37 +12,33 @@
 
     <header class="header">
 
-        <div class="header__logo">RMz</div>
+        <div class="header__logo">RMz&#9824</div>
     </header>
 
     <main class="content">
         <h1 class="content__title">Генератор ролей для мафии</h1>
+
         <button class="button button__add-user">Заполнить список игроков</button>
-
         <section class="list">
-
             <ul class="list__roles">
-               
             </ul>
 
             <ul class="list__niks">
             </ul>
 
-         
-           <div class="list__container list__container_type_button-role">
+            <div class="list__container list__container_type_button-role">
                 <button class="button button__random-role">Перемешать роли</button>
-                <!-- <button class="button button__reset-role">Очистить</button> -->
-           </div>
-          
-            <div class="list__container list__container_type_button-user"> 
+            </div>
+            <div class="list__container list__container_type_button-user">
                 <button class="button button__random-user">Перемешать игроков</button>
-                <!-- <button class="button button__reset-user">Очистить</button>  -->
             </div>
             <div class="list__container list__container_type_form-role"></div>
             <div class="list__container list__container_type_form-nik"></div>
         </section>
 
-            </main>
+        <button class="button button__reset">Сбросить все</button>
+
+    </main>
 
     <footer class="footer">
         <p class="footer__logo">&copy; 2022 Рандомайзер</p>
@@ -51,18 +47,29 @@
     <!-- Темплейт для карточки с игроком -->
     <template class='card-template card-template_type_user'>
          <li class="card card__nik"> 
-            <h2 class="card__user-text">игрок</h2>
+            <button class="card__delete-button card__delete-button_user" type="button">
+                <div class="card__delete-cup"></div>
+                <div class="card__delete-basket"></div>
+            </button>
+            
+                <h2 class="card__user-text">игрок</h2>  
+           
+           
         </li>
     </template>
 
     <!-- Темплейт для карточки с ролью -->
     <template class='card-template card-template_type_role'>
           <li class="card card__role"> 
+            <button class="card__delete-button card__delete-button_role" type="button">
+                <div class="card__delete-cup"></div>
+                <div class="card__delete-basket"></div>
+            </button>
             <h2 class="card__role-text">роль</h2>
         </li>
     </template>
 
-<!-- Темплейт для формы добавления игрока -->
+    <!-- Темплейт для формы добавления игрока -->
     <template class='form-template form-template_type_user'>
         <form class="form">
             

@@ -1,11 +1,23 @@
 .card__user-text {
+    /* min-width: 195px; */
+    width: 100%;
+    min-height: 30px;
     text-align: center;
     margin: 0;
     font-size: 17px;
+    background: #b8cce7;
+    border-radius: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 960px) {
     .card__user-text {
         font-size: 15px;
+      
     }
 }
+
+
+

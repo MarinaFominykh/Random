@@ -1,16 +1,27 @@
 .card {
     width: 100%;
-    min-height: 23px;
-    background: #FFFFFF;
+    min-height: 30px;
+    margin: 0 0 10px 0;
+    /* background: #FFFFFF;
     border-radius: 10px;
     position: relative;
     color: black;
-    margin: 0 0 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 40px; */
+  
+    
 }
 
 @media screen and (max-width: 960px) {
     .card {
         font-size: 12px;
-        min-width: 150px;
+       
     }
 }
+
+/* @media screen and (max-width: 540px) {
+    .card {
+        grid-template-columns: 1fr 30px;
+       
+    }
+} */

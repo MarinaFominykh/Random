@@ -1,0 +1,11 @@
+.card__delete-basket {
+    width: 15px;
+    height: 12px;
+    background-image: url(../../../images/basket_delete.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    /* border: 1px red solid; */
+    
+}
+
